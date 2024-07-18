@@ -5,6 +5,7 @@
 }
 body{
     background-color: #000;
+    color: #fff;
     font-family: "Inter", sans-serif;
 }
 
@@ -18,6 +19,11 @@ body{
     font-variation-settings:
       "slnt" 0;
   }
+@font-face {
+    font-family: 'Miama'; 
+    src: url('../Miama.ttf'); 
+}
+  
 
 /* Common Style */
 :root{
@@ -27,22 +33,45 @@ body{
 
 .container{
     width: 85%;
+    margin: 0 auto;
 }
 
 .secondary-text{
     opacity: 0.5;
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 20px;
+}
+section{
+    margin-bottom: 85px;
+}
+.section-title{
+    font-size: 48px;
+    font-weight: 800;
+}
+.section-info{
+    margin-bottom: 45px;
+}
+.primary-btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px;
 }
 
   
 
 /*********** Header ***********/
+#header{
+    background: linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(119,119,119,0) 100%);
+    padding-top: 25px;
+    height: 100vh;
+}
 
 /* Nav */
-#nav{
-    margin-top: 25px;
-}
 #nav .container{
     margin: 0 auto;
     display: flex;
@@ -82,8 +111,143 @@ body{
     color: #fff;
 }
 
+/* Hero */
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: space-between; */
+}
+.hero-content-box,.hero-image-box{
+    width: 50%;
+}
 
+#hero .hero-title{
+    font-size: 75px;
+}
+#hero .hero-title span{
+   font-family: 'Miama';
+}
+.hero-description{
+    margin-top: 20px;
+}
+.buttons{
+    margin-top: 40px;
+}
+.buttons a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+}
+.join-btn{
+    background-color: var(--primary-color);
+}
+.hero-image-box{
+    position: relative;
+    text-align: right;
+}
 
+.hero-image-box img{
+    width: 350px;
+    height: 580px;
+}
+.t-box{
+    width: 205px;
+    height: 95px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-align: left;
+} 
+.t-box1{
+    position: absolute;
+    bottom: 105px;
+    left: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.t-box2{
+    position: absolute;
+    top: 120px;
+    right: -35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ci{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+}
+.t-box1 h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.t-box1 p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.t-box2 h3{
+    font-size: 40px;
+    font-weight: 700;
+}
+.t-box2 p{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/*********** Habits ***********/
+
+#habits .section-info{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.habit-cards{
+    display: flex;
+    justify-content: space-around;
+}
+.h-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-info{
+    margin: 0 auto;
+    text-align: center;
+}
+.h-img{
+    width: 180px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+.h-card h4{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/*********** Habits ***********/
+#extra .extra-container{
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#extra .image-box img{
+    width: 360px;
+    border-radius: 15px;
+}
 
 
 
@@ -104,5 +268,61 @@ body{
     }
     .bars{
         display: block;
+    }
+    .hero-content-box,.hero-image-box{
+        width: 100%;
+    }
+    .hero-container{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    #hero .hero-title{
+        font-size: 36px;
+    }
+    .hero-description{
+        font-size: 16px;
+    }
+    .buttons{
+        margin-bottom: 40px;
+    }
+    .hero-image-box{
+        text-align: center;
+    }
+    .t-box{
+        width: 145px;
+        height: 70px;
+    } 
+    .t-box1{
+        bottom: 250px;
+        left: 15px;
+    }
+    .t-box2{
+        top: 60px;
+        right: 75px;
+    }
+    .t-box1 h3{
+        font-size: 18px;
+    }
+    .t-box2 h3{
+        font-size: 30px;
+    }
+    .ci{
+        width: 30px;
+        height: 30px;
+    }
+    #main{
+        margin-top: 550px;
+    }
+    .section-title{
+        font-size: 32px;
+    }
+    .section-info{
+        margin-bottom: 20px;
+    }
+    .habit-cards{
+        flex-direction: column;
+    }
+    .h-card{
+        margin-bottom: 20px;
     }
 }
