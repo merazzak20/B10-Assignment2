@@ -1,0 +1,108 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* font */
+.inter-normal {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+/* Common Style */
+:root{
+    --primary-color: #E6533C;
+    --secondary-bg: #222222;
+}
+
+.container{
+    width: 85%;
+}
+
+.secondary-text{
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+  
+
+/*********** Header ***********/
+
+/* Nav */
+#nav{
+    margin-top: 25px;
+}
+#nav .container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    color: var(--primary-color);
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.nav-items{
+    display: flex;
+    padding: 15px 5px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+}
+.nav-items li{
+    list-style: none;
+    margin-right: 10px;
+}
+.nav-items a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.nav-items .active{
+    background-color: var(--primary-color);
+}
+.bars{
+    display: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********** Responsive ***********/
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    .nav-items{
+        display: none;
+    }
+    .bars{
+        display: block;
+    }
+}
