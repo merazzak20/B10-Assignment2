@@ -151,11 +151,11 @@ section{
 .hero-image-box{
     position: relative;
     text-align: right;
-}
-
-.hero-image-box img{
     width: 350px;
     height: 580px;
+}
+.hero-image-box img{
+    width: 100%;
 }
 .t-box{
     width: 205px;
@@ -168,7 +168,7 @@ section{
 .t-box1{
     position: absolute;
     bottom: 105px;
-    left: 160px;
+    left: -100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -186,6 +186,13 @@ section{
     height: 40px;
     border-radius: 50px;
     background-color: var(--primary-color);
+    position: relative;
+}
+.fa-solid{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    visibility: hidden;
 }
 .t-box1 h3{
     font-size: 24px;
@@ -237,19 +244,212 @@ section{
 }
 
 /*********** Habits ***********/
+#extra .text-box, #extra .img-box{
+    width: 50%;
+}
 #extra .extra-container{
     background-color: var(--secondary-bg);
     padding: 30px;
     border-radius: 15px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-around;
+    
 }
 #extra .image-box img{
     width: 360px;
     border-radius: 15px;
 }
 
+/*********** Bmi ***********/
+.bmi-container{
+    display: flex;
+    justify-content: center;
+}
+#calculator{
+    background-color: var(--secondary-bg);
+    padding: 40px 0;
+}
+.calculator-container{
+    display: flex;
+    justify-content: space-between;
+}
+caption{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+table{
+    border: 1px solid rgba(255,255,255,0.1);
+    border-collapse: collapse;
+}
+td,th{
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+}
+td{
+    color: rgba(255,255,255,0.3);
+    font-weight: lighter;
+}
+.calculator-inputs h4{
+    font-size: 30px;
+    font-weight: 600;
+}
+input[type = "number"],input[type = "text"],select{
+    padding: 15px 10px;
+    background-color: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 5px;
+}
+select{
+    color: rgba(255,255,255,0.3);
+}
+option{
+    color: #222222;
+}
+.form{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 20px;
+}
+.factor{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.calculate-btn{
+    border: none;
+    outline: none;
+}
 
+/*********** Team ***********/
+#team .section-info{
+    text-align: center;
+}
+.tm1{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer1.png);
+}
+.tm2{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer2.png);
+}
+.tm3{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer3.png);
+}
+.tm4{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer4.png);
+}
+.tm5{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer5.png);
+}
+.tm6{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(../images/trainer6.png);
+}
+.tms{
+    background-color: var(--secondary-bg);
+    padding: 20px 20px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.tm{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+.tm-info{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.tm-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*********** Testimonial ***********/
+.testimonial-container .section-info{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.testimonial{
+    text-align: center;
+}
+.testimonial img{
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+}
+.testimonial .qoute{
+    color: rgba(255,255,255,0.3);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 60%;
+}
+.testimonial h5{
+    font-size: 25px;
+    font-weight: 600;
+}
+.dots{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot2{
+    background-color: var(--primary-color);
+}
+
+/*********** Footer ***********/
+#footer{
+    background-color: var(--secondary-bg);
+}
+.footer-container{
+    padding: 50px 10px 10px 10px;
+}
+.footer-column{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.f{
+    width: 33%;
+}
+.sub-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.f-link li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+.f-link a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.3);
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+hr{
+    border: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.bottom-text{
+    margin-top: 20px;
+    text-align: center;
+}
 
 
 
@@ -310,6 +510,9 @@ section{
         width: 30px;
         height: 30px;
     }
+    .fa-solid{
+        visibility: visible;
+    }
     #main{
         margin-top: 550px;
     }
@@ -325,4 +528,51 @@ section{
     .h-card{
         margin-bottom: 20px;
     }
+    #extra .extra-container{
+        flex-direction: column;
+        
+    }
+    #extra .text-box, #extra .img-box{
+        width: 100%;
+    }
+    #extra .text-box{
+        margin-bottom: 30px;
+    }
+    #extra .text-box .primary-btn{
+        padding: 16px 40px;
+    }
+    #extra .image-box img{
+        width: 100%;
+    }
+    .calculator-container{
+        flex-direction: column;
+    }
+    .table{
+        margin-bottom: 20px;
+    }
+    .calculator-inputs h4, caption{
+        font-size: 20px;
+    }
+    caption{
+        text-align: left;
+    }
+    .tms{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        justify-items: center;
+    }
+    .tm{
+        width: 100%;
+    }
+    .footer-column{
+        flex-direction: column;
+    }
+    .f{
+        width: 100%;
+    }
+    .bottom-text{
+        margin-top: 20px;
+        text-align: left;
+    }
+    
 }
