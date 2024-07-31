@@ -51,6 +51,8 @@ section{
 }
 .section-info{
     margin-bottom: 45px;
+    width: 60%;
+    margin: 0 auto;
 }
 .primary-btn{
     text-decoration: none;
@@ -153,6 +155,13 @@ section{
     text-align: right;
     width: 350px;
     height: 580px;
+}
+.hero-description span{
+    color: var(--primary-color);
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    opacity: 1;
 }
 .hero-image-box img{
     width: 100%;
