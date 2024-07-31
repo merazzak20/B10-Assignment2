@@ -270,6 +270,9 @@ section{
 }
 
 /*********** Bmi ***********/
+.bmi-text-box{
+    text-align: center;
+}
 .bmi-container{
     display: flex;
     justify-content: center;
