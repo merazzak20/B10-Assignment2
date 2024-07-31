@@ -303,6 +303,7 @@ input[type = "number"],input[type = "text"],select{
 }
 select{
     color: rgba(255,255,255,0.3);
+    border-right: 15px solid transparent;
 }
 option{
     color: #222222;
